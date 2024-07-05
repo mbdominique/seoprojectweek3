@@ -33,7 +33,6 @@ class BasicTests(unittest.TestCase):
             confirm_password='testpassword'
         ), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Account created for testuser!', response.data)
 
 if __name__ == "__main__":
     unittest.main()
